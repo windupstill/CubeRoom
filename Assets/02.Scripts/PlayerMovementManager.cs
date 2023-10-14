@@ -280,30 +280,6 @@ public class PlayerMovementManager : MonoBehaviour
 
         LastPositionY = transform.position.y;
 
-        if (FallDistance >= 4 && FallDistance <= 10 && CharacterController.isGrounded)
-
-        {
-
-            GetComponent<PlayerHealthManager>().CurrentHealth -= FallDamageLow;
-
-        }
-
-        if (FallDistance >= 10 && FallDistance <= 25 && CharacterController.isGrounded)
-
-        {
-
-            GetComponent<PlayerHealthManager>().CurrentHealth -= FallDamageMedium;
-
-        }
-
-        if (FallDistance >= 25 && CharacterController.isGrounded)
-
-        {
-
-            GetComponent<PlayerHealthManager>().CurrentHealth -= FallDamageHigh;
-
-        }
-
         if (CharacterController.isGrounded)
 
         {
