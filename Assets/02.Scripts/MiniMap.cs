@@ -11,6 +11,7 @@ public class MiniMap : MonoBehaviour
         {
             isMiniMapOn = true;
             EnableAllMeshRenderers(transform);
+            this.gameObject.GetComponent<BoxCollider>().isTrigger = false;
             Destroy(other.gameObject);
         }
     }
